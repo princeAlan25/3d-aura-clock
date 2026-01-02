@@ -1,0 +1,266 @@
+:root{
+    margin: 0;
+    padding:0;
+}
+body{
+    margin: 0;
+    padding-block: 1%;
+    overflow: hidden;
+}
+body *{
+    position: absolute;
+    color: aqua;
+    text-shadow: 0px 0px 5px aquamarine;
+}
+
+main{
+    width: 100%;
+    height: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(rgb(0, 23, 26),rgb(0, 22, 24));
+    background: repeating-linear-gradient(rgb(0, 23, 26) 0%,rgb(0, 23, 26) 50%,rgb(16, 92, 99) 80%,rgb(21, 119, 128) 100%);
+}
+
+main .watch-side{
+    width: 820px;
+    height: 660px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+
+.watch-side .watch-container{
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0px 0px 10px 2px rgb(2, 255, 255),0px 0px 70px 2px rgba(92, 244, 255, 0.377);
+    overflow: hidden;
+}
+.watch-container::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(0, 238, 255, 0.308),rgba(127, 255, 212, 0.562),rgba(0, 238, 255, 0.308));
+}
+
+.watch-container .needles{
+    width: 5%;
+    height: 5%;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.needles::after{
+    position: absolute;
+    content: "";
+    width: 130%;
+    height: 130%;
+    background: radial-gradient(rgb(0, 206, 206),rgb(1, 160, 160),aquamarine);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    box-shadow: 0px 0px 100px 10px rgb(148, 255, 255);
+}
+
+.needles .needle{
+    bottom: 50%;
+    box-shadow: 0px 0px 5px 0px aquamarine;
+    transform-origin: bottom;
+    transform-style: preserve-3d;
+}
+.hours-needle{
+    width: 50%;
+    height: 800%;
+    background: rgb(0, 206, 206);
+}
+.minutes-needle{
+    width: 30%;
+    height: 900%;
+    background: rgb(1, 160, 160);
+}
+.seconds-needle{
+    width: 10%;
+    height: 1000%;
+    background: aquamarine;
+}
+
+.numbers-holder,.dots-holder{
+    width: 100%;
+    height: 100%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbers-holder div{
+    width: 15%;
+    height: 100%;
+    color: black;
+    font-size: 200%;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transform-origin: center;
+    transform-style: preserve-3d;
+}
+.numbers-holder div h4{
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.numbers-holder div::before{
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 6px;
+    background: aqua;
+    top: 0;
+    z-index: 1;
+}
+.numbers-holder div::after{
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 6px;
+    background: aquamarine;
+    bottom: 0;
+    z-index: 1;
+}
+.dots-holder{
+    z-index: 0;
+}
+.dots-holder .dot{
+    width: 1%;
+    height: 98.5%;
+    border-block: 5px solid aquamarine;
+    transform-origin: center;
+    transform-style: preserve-3d;
+}
+
+
+
+.extra-side{
+    width: 37%;
+    height: 90%;
+    padding: 1%;
+    right: 0;
+    z-index: 0;
+    overflow: hidden;
+}
+.extra-side *{
+    position: relative;
+}
+.extra-side::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 33%;
+    background: rgb(0, 23, 26);
+    left: 0;
+    box-shadow: 0px 0px 5px 2px rgb(0, 23, 26);
+    z-index: 1;
+    animation-delay: 10s;
+    animation: showTexts 30s linear infinite;
+    -webkit-animation: showTexts 30s linear infinite;
+}
+@keyframes showTexts{
+    0%{
+        left: 0;
+    }
+    50%{
+        left: 100%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+
+.activities-time{
+    width: 100%;
+    height: 65%;
+}
+.time-holder{
+    width: 95%;
+    height: 30%;
+    font-size: 250%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    box-shadow: 0px 0px 5px 0px aquamarine;
+    margin-inline: auto;
+    background: linear-gradient(transparent,rgba(0, 255, 255, 0.651),transparent);
+    top: 2%;
+}
+
+.time-button,.time-reset-button{
+    width: 95%;
+    height: 30%;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline: auto;
+}
+
+.time-button button.in-actions{
+    cursor: pointer;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(transparent,rgba(0, 109, 109, 0.651),transparent);
+    border: none;
+    font-size: 20px;
+}
+.time-button button.in-actions:active{
+    color: rgba(0, 255, 255, 0.603);
+    background: linear-gradient(rgba(0, 109, 109, 0.651),transparent,rgba(0, 109, 109, 0.651));
+}
+.time-button button.in-actions:hover{
+    box-shadow: 0px 0px 3px 1px rgb(0, 128, 128);
+}
+
+.time-reset-button button{
+    cursor: pointer;
+    width: 95%;
+    height: 95%;
+    background: linear-gradient(transparent,rgba(255, 174, 0, 0.363),transparent);
+    font-size: 20px;
+    top: 10%;
+    border: none;
+    color: rgb(255, 153, 0);
+    text-shadow: 0px 0px 2px orange;
+}
+.time-reset-button button:hover{
+    box-shadow: 0px 0px 2px 0px orange;
+}
+.time-reset-button button:active{
+    background: linear-gradient(rgba(255, 174, 0, 0.363),rgba(255, 174, 0, 0.185),rgba(255, 174, 0, 0.363));
+}
+sub{
+    font-size: 15px;
+}
